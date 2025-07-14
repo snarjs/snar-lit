@@ -1,0 +1,66 @@
+{
+	"name": "@snar/lit",
+	"version": "1.7.3",
+	"type": "module",
+	"main": "./out/index.js",
+	"module": "./out/index.js",
+	"description": "Lit controller helpers built on snar.",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/snarjs/snar.git",
+		"directory": "packages/snar-lit"
+	},
+	"exports": {
+		".": {
+			"import": "./out/index.js",
+			"types": "./out/index.d.ts"
+		}
+	},
+	"scripts": {
+		"build": "wireit",
+		"test": "wireit"
+	},
+	"wireit": {
+		"build": {
+			"command": "tsc --pretty",
+			"clean": "if-file-deleted",
+			"files": [
+				"./tsconfig.json",
+				"./src/**/*.ts"
+			],
+			"output": [
+				"out"
+			]
+		},
+		"test": {
+			"command": "wtr",
+			"dependencies": [
+				"build"
+			],
+			"files": [
+				"web-test-runner.config.js"
+			]
+		}
+	},
+	"devDependencies": {
+		"@types/chai": "^5.2.2",
+		"@types/mocha": "^10.0.10",
+		"@web/test-runner": "^0.20.2",
+		"chai": "^5.2.1",
+		"lit": "^3.3.1",
+		"snar": "^2.3.2",
+		"typescript": "^5.8.3",
+		"wireit": "^0.14.12"
+	},
+	"peerDependencies": {
+		"lit": "^3.0.0",
+		"snar": "^2.0.0"
+	},
+	"files": [
+		"./out",
+		"!./out/test"
+	],
+	"dependencies": {
+		"remove": "^0.1.5"
+	}
+}
