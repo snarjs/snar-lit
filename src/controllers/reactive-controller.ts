@@ -11,7 +11,7 @@ import {
 	type ReactiveControllerHost,
 	type ReactiveElement,
 } from 'lit'
-import {type PropertyValues, ReactiveObject} from 'snar'
+import {type PropertyValues, ReactiveObject, type UpdateCalls} from 'snar'
 
 const hostedMethods = new Set([
 	'hostConnected',
