@@ -5,7 +5,7 @@
 		"moduleResolution": "nodenext",
 		"experimentalDecorators": true,
 		// "rootDir": "src",
-		"outDir": "./lib",
+		"outDir": "./out",
 		"allowSyntheticDefaultImports": true,
 		"useDefineForClassFields": false,
 		"declaration": true,

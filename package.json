@@ -1,6 +1,6 @@
 {
 	"name": "@snar/lit",
-	"version": "1.7.4",
+	"version": "1.7.5",
 	"type": "module",
 	"main": "./out/index.js",
 	"module": "./out/index.js",
@@ -22,14 +22,14 @@
 	},
 	"wireit": {
 		"build": {
-			"command": "tsc --pretty",
+			"command": "tsc",
 			"clean": "if-file-deleted",
 			"files": [
 				"./tsconfig.json",
-				"./src/**/*.ts"
+				"./src/"
 			],
 			"output": [
-				"out"
+				"./out/"
 			]
 		},
 		"test": {
